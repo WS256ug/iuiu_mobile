@@ -1,0 +1,185 @@
+import '../models/academic_result.dart';
+
+/// Replaceable local result data used before the student-results API exists.
+abstract final class ResultsMockData {
+  static const List<CourseResult> yearOneSemesterOneCourses = [
+    CourseResult(
+      id: 'bit-1106',
+      courseCode: 'BIT 1106',
+      courseTitle: 'Mathematics for Information Technology',
+      creditUnits: 3,
+      score: 76,
+      grade: 'B+',
+      gradePoint: 4.5,
+    ),
+    CourseResult(
+      id: 'bit-1107',
+      courseCode: 'BIT 1107',
+      courseTitle: 'Introduction to Computing',
+      creditUnits: 3,
+      score: 69,
+      grade: 'C+',
+      gradePoint: 3.5,
+    ),
+    CourseResult(
+      id: 'bit-1202',
+      courseCode: 'BIT 1202',
+      courseTitle: 'Information Systems',
+      creditUnits: 4,
+      score: 83,
+      grade: 'A',
+      gradePoint: 5,
+    ),
+    CourseResult(
+      id: 'cos-1102',
+      courseCode: 'COS 1102',
+      courseTitle: 'Computer Applications',
+      creditUnits: 4,
+      score: 76,
+      grade: 'B+',
+      gradePoint: 4.5,
+    ),
+    CourseResult(
+      id: 'csc-1106',
+      courseCode: 'CSC 1106',
+      courseTitle: 'Introduction to Programming and Problem Solving',
+      creditUnits: 3,
+      score: 85,
+      grade: 'A',
+      gradePoint: 5,
+    ),
+    CourseResult(
+      id: 'ell-1101',
+      courseCode: 'ELL 1101',
+      courseTitle: 'Language and Communication Skills',
+      creditUnits: 4,
+      score: 57,
+      grade: 'D+',
+      gradePoint: 2.5,
+    ),
+    CourseResult(
+      id: 'iqf-1101',
+      courseCode: 'IQF 1101',
+      courseTitle: 'Introduction to Islam',
+      creditUnits: 0,
+      score: 60,
+      grade: 'C',
+      gradePoint: 3,
+    ),
+  ];
+
+  static const List<CourseworkResult> yearOneSemesterOneCoursework = [
+    CourseworkResult(
+      id: 'coursework-bit-1106',
+      courseCode: 'BIT 1106',
+      courseTitle: 'Mathematics for Information Technology',
+      assignmentScore: 18,
+      testScore: 24,
+      total: 42,
+    ),
+    CourseworkResult(
+      id: 'coursework-bit-1107',
+      courseCode: 'BIT 1107',
+      courseTitle: 'Introduction to Computing',
+      assignmentScore: 16,
+      testScore: 20,
+      total: 36,
+    ),
+    CourseworkResult(
+      id: 'coursework-bit-1202',
+      courseCode: 'BIT 1202',
+      courseTitle: 'Information Systems',
+      assignmentScore: 19,
+      testScore: 25,
+      total: 44,
+    ),
+    CourseworkResult(
+      id: 'coursework-csc-1106',
+      courseCode: 'CSC 1106',
+      courseTitle: 'Introduction to Programming and Problem Solving',
+      assignmentScore: 20,
+      testScore: 26,
+      total: 46,
+    ),
+  ];
+
+  static const List<AcademicResultPeriod> periods = [
+    AcademicResultPeriod(
+      id: 'year-1-semester-1',
+      year: 1,
+      semester: 1,
+      gpa: 4.14,
+      cgpa: 4.32,
+      classification: 'Second Class (Honours) Upper Division',
+      courseResults: yearOneSemesterOneCourses,
+      courseworkResults: yearOneSemesterOneCoursework,
+    ),
+    AcademicResultPeriod(
+      id: 'year-1-semester-2',
+      year: 1,
+      semester: 2,
+      gpa: 4.28,
+      cgpa: 4.30,
+      classification: 'Second Class (Honours) Upper Division',
+      courseResults: [
+        CourseResult(
+          id: 'bit-1204',
+          courseCode: 'BIT 1204',
+          courseTitle: 'Database Systems',
+          creditUnits: 4,
+          score: 81,
+          grade: 'A',
+          gradePoint: 5,
+        ),
+        CourseResult(
+          id: 'bit-1206',
+          courseCode: 'BIT 1206',
+          courseTitle: 'Web Application Development',
+          creditUnits: 4,
+          score: 74,
+          grade: 'B+',
+          gradePoint: 4.5,
+        ),
+      ],
+      courseworkResults: [
+        CourseworkResult(
+          id: 'coursework-bit-1204',
+          courseCode: 'BIT 1204',
+          courseTitle: 'Database Systems',
+          assignmentScore: 18,
+          testScore: 25,
+          total: 43,
+        ),
+      ],
+    ),
+    AcademicResultPeriod(
+      id: 'year-2-semester-1',
+      year: 2,
+      semester: 1,
+      gpa: 4.36,
+      cgpa: 4.33,
+      classification: 'Second Class (Honours) Upper Division',
+      courseResults: [
+        CourseResult(
+          id: 'bit-2101',
+          courseCode: 'BIT 2101',
+          courseTitle: 'Data Structures and Algorithms',
+          creditUnits: 4,
+          score: 79,
+          grade: 'B+',
+          gradePoint: 4.5,
+        ),
+      ],
+      courseworkResults: [
+        CourseworkResult(
+          id: 'coursework-bit-2101',
+          courseCode: 'BIT 2101',
+          courseTitle: 'Data Structures and Algorithms',
+          assignmentScore: 19,
+          testScore: 24,
+          total: 43,
+        ),
+      ],
+    ),
+  ];
+}
